@@ -1,20 +1,14 @@
 name: Deploy to prod
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Deploy to test"]
+    types:
+      - completed
 
 jobs:
-  say-what:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Say What
-        run: echo "Say what...?"
-
   deploy-prd:
-    #needs: print-env
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
