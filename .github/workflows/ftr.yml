@@ -6,8 +6,18 @@ on:
       - main
 
 jobs:
+  say-what:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Say What
+        run: echo "Say what...?"
+
   test-dep:
-    #needs: print-env
+    needs: print-env
     runs-on: ubuntu-latest
 
     steps:
