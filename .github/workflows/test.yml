@@ -1,4 +1,4 @@
-name: Print Environment Name
+name: Deploy to test
 
 on:
   push:
@@ -6,12 +6,12 @@ on:
       - main
 
 jobs:
-  print-env:
+  deploy-tst:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Print Environment Name
-        run: echo "My name is...wait for it..." #${{ GITHUB_ENV }}
+      - name: Print Test stuff
+        run: echo "Print some test stuff."

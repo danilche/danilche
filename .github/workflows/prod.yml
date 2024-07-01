@@ -1,4 +1,4 @@
-name: Test dependency
+name: Deploy to prod
 
 on:
   push:
@@ -10,19 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
       - name: Say What
         run: echo "Say what...?"
 
-  test-dep:
-    needs: print-env
+  deploy-prd:
+    #needs: print-env
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Print Environment Name
-        run: echo "My name is...wait for it..."
+      - name: Print Prod stuff
+        run: echo "Print some prod stuff..."
