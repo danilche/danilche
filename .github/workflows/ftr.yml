@@ -1,0 +1,18 @@
+name: Test dependency
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-dep:
+    needs: print-env
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Print Environment Name
+        run: echo "My name is...wait for it..." ${{ GITHUB_ENV }}
