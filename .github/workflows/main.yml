@@ -1,15 +1,17 @@
+name: Print Environment Name
+
 on:
   push:
     branches:
       - main
 
 jobs:
-  say-hi
+  print-env:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Print Hi Env
-        run: echo "Hi, this is my env ${{ github.workflow }}
+      - name: Print Environment Name
+        run: echo "Environment Name: ${{ github.workflow }}"
