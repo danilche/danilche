@@ -17,3 +17,11 @@ jobs:
 
       - name: Print Prod stuff
         run: echo "Print some prod stuff..."
+
+    smth-else:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Print smth else
+        run: echo "Print smth else..."
