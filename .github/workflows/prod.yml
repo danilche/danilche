@@ -19,6 +19,7 @@ jobs:
         run: echo "Print some prod stuff..."
 
   smth-else:
+    needs: deploy-prd
     runs-on: ubuntu-latest
 
     steps:
