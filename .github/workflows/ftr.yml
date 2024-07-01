@@ -7,7 +7,7 @@ on:
 
 jobs:
   test-dep:
-    needs: print-env
+    #needs: print-env
     runs-on: ubuntu-latest
 
     steps:
