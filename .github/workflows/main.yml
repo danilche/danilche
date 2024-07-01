@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Print Environment Name
-        run: echo "My name is...wait for it..." ${{ github.workflow }}
+        run: echo "My name is...wait for it..." ${{ github.event.repository.environment }}
