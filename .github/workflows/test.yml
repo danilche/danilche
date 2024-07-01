@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Print Test stuff
-        run: echo "Print some test stuff."#${{var}}
+        run: echo "Print some test stuff." ##${{var}}
